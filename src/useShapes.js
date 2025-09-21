@@ -5,7 +5,7 @@ export function useShapes() {
   const [shapes, setShapes] = useState([]);
   const intervalRef = useRef(null);
 
-  const removeCircle = useCallback((id) => {
+  const removeShape = useCallback((id) => {
     setShapes((shapes) => {
       return shapes.filter((shape) => shape.id !== id);
     });
@@ -16,12 +16,12 @@ export function useShapes() {
       setShapes((shapes) => {
         return [...shapes, createShape()];
       });
-    }, 2000);
+    }, 1000);
 
     return () => {
       clearInterval(intervalRef.current);
     };
   }, []);
 
-  return [shapes, removeCircle];
+  return [shapes, removeShape];
 }

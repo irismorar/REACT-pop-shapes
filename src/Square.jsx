@@ -1,7 +1,7 @@
-export function Circle({ x, y, onShapeClick }) {
+export function Square({ x, y, onShapeClick }) {
   return (
     <div
-      className="circle"
+      className="square"
       style={{ left: `${x}px`, top: `${y}px` }}
       onClick={onShapeClick}
     ></div>

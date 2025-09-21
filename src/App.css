@@ -13,6 +13,13 @@
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
-  border: 1px solid hsla(0, 0%, 100%, 0.7);
+  border: 1px solid white;
+  position: absolute;
+}
+
+.square {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid white;
   position: absolute;
 }
