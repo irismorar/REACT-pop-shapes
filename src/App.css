@@ -5,7 +5,7 @@
 }
 
 #root {
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
   margin: 0;
 }
 
@@ -22,4 +22,15 @@
   height: 4rem;
   border: 1px solid white;
   position: absolute;
+}
+
+section.score {
+  position: absolute;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  background-color: darkgreen;
+  left: 50vw;
+  transform: translateX(-50%);
 }

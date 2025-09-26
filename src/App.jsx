@@ -2,9 +2,11 @@ import "./App.css";
 import { useShapes } from "./useShapes";
 import { Circle } from "./Circle";
 import { Square } from "./Square";
+import { useScore } from "./useScore";
 
 export default function App() {
   const [shapes, removeShape] = useShapes();
+  const { score, increaseScoreBy } = useScore();
 
   return (
     <>
@@ -17,6 +19,7 @@ export default function App() {
               y={shape.y}
               onShapeClick={() => {
                 removeShape(shape.id);
+                increaseScoreBy(1);
               }}
             />
           );
@@ -29,11 +32,13 @@ export default function App() {
               y={shape.y}
               onShapeClick={() => {
                 removeShape(shape.id);
+                increaseScoreBy(2);
               }}
             />
           );
         }
       })}
+      <section className="score">SCORE: {score}</section>
     </>
   );
 }
