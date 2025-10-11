@@ -3,9 +3,10 @@ import { useShapes } from "./useShapes";
 import { Circle } from "./Circle";
 import { Square } from "./Square";
 import { useScore } from "./useScore";
+import { PausedAlert } from "./PausedAlert";
 
 export default function App() {
-  const [shapes, removeShape] = useShapes();
+  const [shapes, removeShape, isPaused] = useShapes();
   const { score, increaseScoreBy } = useScore();
 
   return (
@@ -39,6 +40,7 @@ export default function App() {
         }
       })}
       <section className="score">SCORE: {score}</section>
+      {isPaused && <PausedAlert />}
     </>
   );
 }

@@ -34,3 +34,17 @@ section.score {
   left: 50vw;
   transform: translateX(-50%);
 }
+
+.paused-alert-container {
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  background-color: blueviolet;
+  color: antiquewhite;
+  text-align: center;
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+}
